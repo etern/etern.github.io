@@ -3,6 +3,6 @@
 #+OPTIONS: num:nil ^:{} toc:nil
 
 # Create post
-1. `cd _post`
-2. ``emacs `date -I`-post-name.md``
-3. `M-x` `auto-insert`
+1. ~cd _post~
+2. ~emacs `date -I`-post-name.md~
+3. ~M-x~ ~auto-insert~
