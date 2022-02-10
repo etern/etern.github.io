@@ -2,7 +2,12 @@
 #+TITLE: README
 #+OPTIONS: num:nil ^:{} toc:nil
 
-# Create post
+* Create post
+** from emacs
+1. ~dired~ to _post
+2. press ~c~
+
+** from bash
 1. ~cd _post~
 2. ~emacs `date -I`-post-name.md~
 3. ~M-x~ ~auto-insert~
