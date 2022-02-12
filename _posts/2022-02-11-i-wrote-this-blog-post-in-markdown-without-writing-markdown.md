@@ -11,8 +11,9 @@ like `hugo`, for a workaround, and here is another way:
 
 # How to use the package
 
-With this package, you can edit one format as another format, in **emacs**,
-as long as both format supported by pandoc, like `org` \<-\> `markdown`.
+With this package, you can edit one format as another format, in
+**emacs**, as long as both format supported by pandoc, like `org` \<-\>
+`markdown`.
 
 Here's the steps:
 
@@ -24,6 +25,16 @@ Here's the steps:
 
 3.  Write in this buffer with Org syntax, `C-x C-s` to commit back to
     parent buffer.
+
+It works vice versa, in case you want to edit Org files as markdown,
+`M-x` `edit-as-format` choose `markdown` from the prompt. Or, define
+your own convenient commands:
+
+``` elisp
+(defun edit-org-as-markdown ()
+  (interactive)
+  (edit-as-format "org" "markdown"))
+```
 
 # Why should you use it
 
@@ -49,7 +60,10 @@ should try `edit-as-format` ;)
 
 Org mode is such big thing, pandoc might not support all of it's
 features, I just show you the most basic ones: emphasis, links,
-ordered/unordered list and tables, that's great amount for blog posting.
+ordered/unordered list, code blocks and tables, that's great amount for
+blog posting.
 
-The last point, if you don't agree that Org is better than markdown,
-`edit-as-format` is for you, you can edit Org files as markdown\!
+*Caution: `edit-as-format-org` will process the whole buffer if there's
+no marked region, for posts with
+[front-matter](https://jekyllrb.com/docs/front-matter/), mark region to
+exclude it first.*
