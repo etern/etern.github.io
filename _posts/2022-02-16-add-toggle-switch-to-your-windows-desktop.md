@@ -57,6 +57,14 @@ and that's the fantastic part, let's examine it a bit more.
 The `Change-Shortcut-Icon` function accepts a `$iconNo` argument,
 which is the index into icons in resource file `imageres.dll`, you can
 use a separate `*.ico` file for this, but the builtin icon resource is
-much easier for maintain, it's already there.
+just easier for maintain, it's already there.
 
-To view all icons in `imageres.dll`, I recommand [IconViewer](https://www.botproductions.com/iconview/iconview.html), after install, it's integreted in windows property dialog.
+To view all icons in `imageres.dll`, I recommand
+[IconViewer](https://www.botproductions.com/iconview/iconview.html),
+after install, it's integreted in windows property dialog. In above
+script, I use number 26 and 28, those are:
+- red cross icon for `Stopped` status
+- green check icon for `Running` status
+
+But I still don't know how to get the icon number, the #number shown
+in IconViewer is not right, I tried it out, tell me if you know how.
