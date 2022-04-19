@@ -12,9 +12,9 @@ qsort (x:xs) = qsort [a | a <- xs, a <= x] ++ [x] ++ qsort [a | a <- xs, a > x]
 Pythoner smiles:
 
 ``` python
-def def qsort(x=[], *xs):
-    return x and (qsort(*[a for a in xs if a < x]) + [x] + qsort(*[b for b in xs if b >=x]))
-# x != 0, call with param destructuring: qsort(*[3, 1, 2])
+def qsort(x=[], *xs):
+	return x and (qsort(*[a for a in xs if a < x]) + [x] + qsort(*[b for b in xs if b >=x]))
+# (x != 0) call with arg destructuring: qsort(*[3, 1, 2])
 ```
 
 For linked list sort, we don't have to do inplace swaping, this is
